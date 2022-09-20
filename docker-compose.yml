@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  db:
+    image: 'postgres'
+    environment:
+      - POSTGRES_PASSWORD=test123
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=toDoListAppDB
+    ports:
+      - '5432:5432'
+  server:
+    build: .
+    image: 'todoappimg'
+    container_name: 'todoapp'
+    depends_on:
+      - db
+    ports:
+      - '3000:3000'

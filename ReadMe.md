@@ -1,3 +1,9 @@
+Running docker image -
+> docker-compose up --build -d
+
+This will run install all dependencies and run container, which can be called using any REST clients.
+
+---------------------------------------------------------------------------------------------------
 Server is hosted on localhost:3000
 
 Routes defined are - 

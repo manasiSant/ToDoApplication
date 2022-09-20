@@ -1,4 +1,3 @@
-const pgtools = require("pgtools");
 const {Client} = require("pg");
 
 const dbName = "toDoListAppDB";
@@ -6,10 +5,11 @@ const tableName = "tasks";
 
 const config = {
     user: 'postgres',
-    host: 'localhost',
+    host: 'db',
     password: 'test123',
     port: 5432,
-    database: dbName
+    database: dbName,
+    ssl: false
 };
 
 module.exports = {
